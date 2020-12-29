@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  php:
+    container_name: mlencki-php
+    image: mlencki/php:1.0
+    build:
+      context: php
+      dockerfile: Dockerfile
+      args:
+        COMPOSER_VERSION: 2.0.8
