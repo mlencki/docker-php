@@ -1,6 +1,8 @@
 FROM php:8.0.0-fpm-alpine
 
 ARG COMPOSER_VERSION
+ENV COMPOSER_MEMORY_LIMIT=-1
+ENV TEST=1
 
 RUN apk --no-cache update \
     && apk --no-cache upgrade \

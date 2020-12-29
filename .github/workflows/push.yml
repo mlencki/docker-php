@@ -16,7 +16,7 @@ jobs:
       - uses: marceloprado/has-changed-path@v1
         id: changed-php
         with:
-          paths: php/Dockerfile
+          paths: php
 
       - name: Log into GitHub Container Registry
         run: echo "${{ secrets.SECRET_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
