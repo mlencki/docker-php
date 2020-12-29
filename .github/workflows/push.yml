@@ -24,4 +24,4 @@ jobs:
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
 
           docker tag php $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:${{ github.ref }}
+          docker push $IMAGE_ID:$VERSION
