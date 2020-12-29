@@ -16,15 +16,15 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Log into GitHub Container Registry
+        run: echo "${{ secrets.SECRET_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+
       - name: Check if PHP image has changed
         uses: marceloprado/has-changed-path@v1
         id: changed-php
         with:
           paths: php
-
-      - name: Log into GitHub Container Registry
-        run: echo "${{ secrets.SECRET_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
-
+          
       - name: Build PHP image
         if: steps.changed-php.outputs.changed == 'true'
         run: docker build . --file ./php/Dockerfile --build-arg COMPOSER_VERSION=$COMPOSER_VERSION --tag php
