@@ -1,8 +1,9 @@
 name: Push to GitHub Container Registry
 
 on:
-  release:
-    types: [released]
+  push:
+    tags:
+      - v*
 
 env:
   COMPOSER_VERSION: 2.0.8
