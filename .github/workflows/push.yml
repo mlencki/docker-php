@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 2
 
       - name: Check if PHP image has changed
-      - uses: marceloprado/has-changed-path@v1
+        uses: marceloprado/has-changed-path@v1
         id: changed-php
         with:
           paths: php
