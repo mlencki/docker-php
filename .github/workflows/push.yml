@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      uses: marceloprado/has-changed-path@v1
+      - uses: marceloprado/has-changed-path@v1
         id: changed-php
         with:
           paths: php/Dockerfile
