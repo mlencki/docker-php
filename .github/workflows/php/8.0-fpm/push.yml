@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - 
+
 env:
   DOCKERFILE: ./php/8.0-fpm/Dockerfile
   IMAGE_ID: ghcr.io/${{ github.repository_owner }}/php
