@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: Check-out github repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
 
       - name: Log into GitHub Container Registry
         run: echo "${{ secrets.SECRET_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
