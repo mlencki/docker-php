@@ -1,5 +1,6 @@
-# Docker images
+# Dockerfiles
 
-Custom docker images:
+Custom dockerfiles:
 
-*  PHP `8.0.0-fpm-alpine` with `2.0.8` composer installed
+*  PHP 
+    *  `php:8.0.0-fpm-alpine` with `2.0.8` composer installed
